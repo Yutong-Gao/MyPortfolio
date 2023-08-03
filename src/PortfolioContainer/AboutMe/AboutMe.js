@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
 import ScrollService from "../../utilities/ScrollService";
 import Animations from "../../utilities/Animations";
@@ -10,7 +10,7 @@ export default function AboutMe(props) {
       return Animations.animations.fadeInScreen(props.id);
   };
 
-  const fadeInSubscription =
+  const fadeInSubscription = // eslint-disable-line no-unused-vars
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const SCREEN_CONSTSANTS = {
@@ -37,7 +37,7 @@ export default function AboutMe(props) {
     ));
   };
   return (
-    <div className="about-me-container screen-container" id={props.id || ""}>
+    <div className="about-me-container screen-container " id={props.id || ""}>
       <div className="about-me-parent">
         <ScreenHeading title={"About me"} subHeading={"Why Choose Me?"} />
         <div className="about-me-card">
@@ -53,7 +53,13 @@ export default function AboutMe(props) {
               {renderHighlight()}
             </div>
             <div className="about-me-options">
-              <button className="btn primary-btn"> Contact me </button>
+              <button
+                className="btn primary-btn"
+                onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
+              >
+                {" "}
+                Contact me{" "}
+              </button>
               <a href="YutongGao_resume.pdf" download="YutongGao_resume.pdf">
                 <button className="btn highlighted-btn">Get Resume</button>
               </a>

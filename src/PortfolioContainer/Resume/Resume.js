@@ -9,11 +9,11 @@ export default function Resume(props) {
   const [carousalOffSetStyle, setCarousalOffSetStyle] = useState({});
 
   let fadeInScreenHandler = (screen) => {
-    if (screen.fadeScreen !== props.id)
+    if (screen.fadeInScreen !== props.id)
       return Animations.animations.fadeInScreen(props.id);
   };
 
-  const fadeInSubscription =
+  const fadeInSubscription = // eslint-disable-line no-unused-vars
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler);
 
   const ResumeHeading = (props) => {
@@ -65,6 +65,7 @@ export default function Resume(props) {
       duration: { fromDate: "2023", toDate: "2023" },
       description: [
         "live on : ",
+        // eslint-disable-next-line react/jsx-no-target-blank
         <a
           href="https://master--e-commerce-project-yutong.netlify.app/"
           target="_blank"

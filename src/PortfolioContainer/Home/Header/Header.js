@@ -19,7 +19,7 @@ export default function Header() {
     if (screenIndex < 0) return;
   };
 
-  let currentScreenSubscription =
+  let currentScreenSubscription = // eslint-disable-line no-unused-vars
     ScrollService.currentScreenBroadCaster.subscribe(updateCurrentScreen);
 
   const getHeaderOptions = () => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { TOTAL_SCREENS } from "../utilities/commonUtils";
+import "./PortfolioContainer.css";
 
 export default function PortfolioContainer() {
   const mapAllScreens = () => {
@@ -15,5 +16,10 @@ export default function PortfolioContainer() {
       )
     );
   };
-  return <div className="portfolio-container">{mapAllScreens()}</div>;
+  return (
+    <div className="portfolio-container">
+      {mapAllScreens()}
+      <div className="footer">All Rights Reserved &copy; Yutong 2023</div>
+    </div>
+  );
 }
