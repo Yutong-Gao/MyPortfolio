@@ -1,9 +1,20 @@
 import React from "react";
-import Typical from "react-typical";
 import ScrollService from "../../../utilities/ScrollService";
 import "./Profile.css";
+import { useTypewriter } from "react-simple-typewriter";
 
 export default function Profile() {
+  const [typeEffect] = useTypewriter({
+    words: [
+      "Full Stack Developer",
+      "MERN Stack Developer",
+      "Java Developer",
+      "React/React Native Developer",
+    ],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
   return (
     <div className="profile-container">
       <div className="profile-parent">
@@ -20,22 +31,7 @@ export default function Profile() {
           <div className="profile-details-role">
             <span className="primary-text">
               {" "}
-              <h1>
-                {" "}
-                <Typical
-                  loop={Infinity}
-                  steps={[
-                    "Full Stack Developer",
-                    3000,
-                    "MERN Stack Developer",
-                    3000,
-                    "Java Developer",
-                    3000,
-                    "React/React Native Developer",
-                    3000,
-                  ]}
-                />
-              </h1>
+              <h1> {typeEffect + "."}</h1>
               <span className="profile-role-tagline">
                 Knack of building application with front and back end
                 operations.

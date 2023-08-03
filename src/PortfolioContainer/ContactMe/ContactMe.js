@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import imgBack from "../../../src/images/mailz.jpeg";
 import load1 from "../../../src/images/load2.gif";
-import Typical from "react-typical";
+import { useTypewriter } from "react-simple-typewriter";
 import axios from "axios";
 import { toast } from "react-toastify";
 import ScreenHeading from "../../utilities/ScreenHeading/ScreenHeading";
@@ -23,6 +23,13 @@ export default function ContactMe(props) {
   const [message, setMessage] = useState("");
   const [banner, setBanner] = useState("");
   const [bool, setBool] = useState(false);
+
+  const [typeEffect] = useTypewriter({
+    words: ["Get in Touch"],
+    loop: {},
+    typeSpeed: 100,
+    deleteSpeed: 40,
+  });
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -67,10 +74,7 @@ export default function ContactMe(props) {
       <ScreenHeading subHeading={"Lets Keep in Touch"} title={"Contact Me"} />
       <div className="central-form">
         <div className="col">
-          <h2 className="title">
-            {" "}
-            <Typical loop={Infinity} steps={["Get in Touch", 3000]} />
-          </h2>
+          <h2 className="title"> {typeEffect + "!"}</h2>
         </div>
         <div className="back-form">
           <div className="img-back">
