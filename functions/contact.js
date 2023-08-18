@@ -1,3 +1,4 @@
+const e = require("express");
 const nodemailer = require("nodemailer");
 
 exports.handler = async function (event, context) {
@@ -37,29 +38,19 @@ exports.handler = async function (event, context) {
                 `,
     };
 
-    var success = false;
-    try {
-      smtpTransporter.sendMail(mailOptions);
-      success = true;
-    } catch (error) {
-      success = false;
-      console.log(error);
-    }
+    smtpTransporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Message sent:" + info.response);
+      }
+    });
 
-    if (success) {
-      return {
-        statusCode: 200,
-        body: JSON.stringify({
-          msg: "Thank you for contacting me!",
-        }),
-      };
-    } else {
-      return {
-        statusCode: 500,
-        body: JSON.stringify({
-          msg: "Send failed due to service error.",
-        }),
-      };
-    }
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
+        msg: "Thank you for contacting me!",
+      }),
+    };
   }
 };
