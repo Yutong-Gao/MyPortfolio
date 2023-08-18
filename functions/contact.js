@@ -1,5 +1,6 @@
-const e = require("express");
 const nodemailer = require("nodemailer");
+const dotenv = require("dotenv");
+dotenv.config();
 
 exports.handler = async function (event, context) {
   if (event.body) {
