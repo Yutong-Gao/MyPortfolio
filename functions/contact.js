@@ -43,7 +43,7 @@ exports.handler = async function (event, context) {
       const info = await smtpTransporter.sendMail(mailOptions);
     }
 
-    sendMail().catch(console.error);
+    await sendMail().catch(console.error);
 
     return {
       statusCode: 200,
