@@ -4,6 +4,7 @@ const nodemailer = require("nodemailer");
 exports.handler = async function (event, context) {
   if (event.body) {
     let data = JSON.parse(event.body);
+    console.log(data);
     if (!data.name || !data.email || !data.message) {
       return {
         statusCode: 200,
