@@ -37,39 +37,29 @@ exports.handler = async function (event, context) {
                 `,
     };
 
-    smtpTransporter.sendMail(mailOptions, (error) => {
-      try {
-        if (error) {
-          return {
-            statusCode: 400,
-            body: JSON.stringify({
-              msg: "please fill all the fields",
-            }),
-          };
-        }
-        return {
-          statusCode: 200,
-          body: JSON.stringify({
-            msg: "Thank you for contacting me!",
-          }),
-        };
-      } catch (error) {
-        if (error) {
-          return {
-            statusCode: 500,
-            body: JSON.stringify({
-              msg: "There is server error.",
-            }),
-          };
-        }
-      }
-    });
-  }
+    var success = false;
+    try {
+      smtpTransporter.sendMail(mailOptions);
+      success = true;
+    } catch (error) {
+      success = false;
+      console.log(error);
+    }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({
-      msg: "Thank you for contacting me!",
-    }),
-  };
+    if (success) {
+      return {
+        statusCode: 200,
+        body: JSON.stringify({
+          msg: "Thank you for contacting me!",
+        }),
+      };
+    } else {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({
+          msg: "Send failed due to service error.",
+        }),
+      };
+    }
+  }
 };
