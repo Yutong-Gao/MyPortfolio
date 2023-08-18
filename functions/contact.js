@@ -39,7 +39,7 @@ exports.handler = async function (event, context) {
                 `,
     };
 
-    smtpTransporter.sendMail(mailOptions, (error, info) => {
+    await smtpTransporter.sendMail(mailOptions, (error, info) => {
       if (error) {
         console.log(error);
       } else {
