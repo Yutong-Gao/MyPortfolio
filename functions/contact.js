@@ -19,7 +19,7 @@ exports.handler = async function (event, context) {
       port: 465,
       auth: {
         user: "yutongg1999@gmail.com",
-        pass: "kezezwzctxrdxle",
+        pass: "vesjozsjcdqybidg",
       },
     });
     let mailOptions = {
