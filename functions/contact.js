@@ -39,13 +39,11 @@ exports.handler = async function (event, context) {
                 `,
     };
 
-    await smtpTransporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log("Message sent:" + info.response);
-      }
-    });
+    async function sendMail() {
+      const info = await smtpTransporter.sendMail(mailOptions);
+    }
+
+    sendMail().catch(console.error);
 
     return {
       statusCode: 200,
