@@ -87,7 +87,7 @@ export default function ContactMe(props) {
             <input type="text" onChange={handleName} value={name} />
             <label htmlFor="email">Email</label>
             <input type="email" onChange={handleEmail} value={email} />
-            <label htmlFor="message">Meaasge</label>
+            <label htmlFor="message">Message</label>
             <textarea type="text" onChange={handleMessage} value={message} />
 
             <div className="send-btn">
