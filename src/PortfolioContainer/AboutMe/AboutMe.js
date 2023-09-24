@@ -15,7 +15,7 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "I'm Yutong Gao, a motivated Softeware Developer. Skilled in Java, Python, JavaScript, and web technologies like React, Redux, Angular, and Node.js. Experienced in building REST APIs, utilizing cloud computing tools like Docker and Kubernetes, and working with AWS and GCP. ",
+      "I'm Yutong Gao, a motivated Softeware Developer. Skilled in Java, Python, JavaScript, and web technologies like React, Redux, Angular, and Node.js. Experienced in building REST APIs, utilizing cloud computing tools like Docker and Kubernetes. ",
     highlights: {
       bullets: [
         "Full Stack web development",

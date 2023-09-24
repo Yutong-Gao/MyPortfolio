@@ -9,7 +9,7 @@ export default function Profile() {
       "Full Stack Developer",
       "MERN Stack Developer",
       "Java Developer",
-      "React/React Native Developer",
+      "React Developer",
     ],
     loop: {},
     typeSpeed: 100,
