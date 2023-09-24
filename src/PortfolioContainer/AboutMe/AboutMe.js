@@ -20,9 +20,9 @@ export default function AboutMe(props) {
       bullets: [
         "Full Stack web development",
         "Interactive Front End as per the design",
-        "React and React Native",
-        "Building REST API",
+        "React and other web technolodies",
         "Managing database",
+        "Problem-Solving and Learning Agility",
       ],
       heading: "Here are a Few Highlights:",
     },
