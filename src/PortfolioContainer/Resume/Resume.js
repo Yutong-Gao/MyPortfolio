@@ -118,8 +118,8 @@ export default function Resume(props) {
       <div className="experience-description">
         <span className="resume-description-text">
           - Collaborated closely with the UI/UX team to translate design
-          concepts into a functional web platform for professors to manage
-          course assignments and check-ins
+          concepts into a functional web platform for creators to manage the
+          upscale the marketing
         </span>
         <br />
         <span className="resume-description-text">
@@ -146,7 +146,7 @@ export default function Resume(props) {
         <br />
         <span className="resume-description-text">
           - Participated in the end-to-end implementation and deployment of the
-          system which helped clients to grade and publish report saving 20 hrs
+          system which helped clients to manage and publish report saving 20 hrs
           of manual effort weekly
         </span>
       </div>
