@@ -117,22 +117,27 @@ export default function Resume(props) {
       />
       <div className="experience-description">
         <span className="resume-description-text">
-          - Implemented enhancements on REST APIs for an existing web
-          application using Spring Boot
+          - Collaborated closely with the UI/UX team to translate design
+          concepts into a functional web platform for professors to manage
+          course assignments and check-ins
         </span>
         <br />
         <span className="resume-description-text">
-          - Created user-friendly front-end interfaces utilizing React, allowing
-          clients to easily manage assignments and online tests
+          - Developed a responsive, JavaScript-based website utilizing HTML and
+          CSS for an intuitive frontend experience.
         </span>
         <br />
         <span className="resume-description-text">
-          - Designed and developed the functionality of the system using Spring
-          Boot and MySQL, resulting in a more efficient information management
-          system
+          - Implemented the React framework, adhering to the MVC design pattern
+          to ensure a modular and scalable application architecture
         </span>
         <br />
 
+        <span className="resume-description-text">
+          - Designed and integrated CRUD functionalities for the MySQL database,
+          ensuring secure and efficient data storage and retrieval
+        </span>
+        <br />
         <span className="resume-description-text">
           - Worked collaboratively with the development teams using Agile
           methodologies (Atlassian JIRA) to ensure timely delivery of
@@ -140,9 +145,9 @@ export default function Resume(props) {
         </span>
         <br />
         <span className="resume-description-text">
-          - Led the end-to-end implementation and deployment of the system which
-          helped clients to grade and publish report saving 20 hrs of manual
-          effort weekly
+          - Participated in the end-to-end implementation and deployment of the
+          system which helped clients to grade and publish report saving 20 hrs
+          of manual effort weekly
         </span>
       </div>
     </div>,
